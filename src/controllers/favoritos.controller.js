@@ -24,7 +24,7 @@ async function agregar(req, res, next) {
     res.status(201).json({ ok: true, data: favorito });
   } catch (err) {
     if (err.code === '23505') {
-      return res.status(409).json({ ok: false, mensaje: 'El producto ya est· en tus favoritos' });
+      return res.status(409).json({ ok: false, mensaje: 'El producto ya est√° en tus favoritos' });
     }
     next(err);
   }
@@ -37,7 +37,7 @@ async function quitar(req, res, next) {
     }
     const quitado = await Favorito.quitar(req.usuario.id, Number(req.params.productoId));
     if (!quitado) {
-      return res.status(404).json({ ok: false, mensaje: 'Ese producto no est· en tus favoritos' });
+      return res.status(404).json({ ok: false, mensaje: 'Ese producto no est√° en tus favoritos' });
     }
     res.status(204).send();
   } catch (err) { next(err); }

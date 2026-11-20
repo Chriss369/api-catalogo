@@ -12,7 +12,7 @@ function validarProducto(body) {
   }
   const p = Number(precio);
   if (precio === undefined || precio === null || precio === '' || Number.isNaN(p) || p <= 0) {
-    errores.push('precio debe ser un número mayor que cero');
+    errores.push('precio debe ser un nÃºmero mayor que cero');
   }
   return errores;
 }
@@ -41,7 +41,7 @@ async function crear(req, res, next) {
   try {
     const errores = validarProducto(req.body);
     if (errores.length) {
-      return res.status(400).json({ ok: false, mensaje: 'Datos inválidos', errores });
+      return res.status(400).json({ ok: false, mensaje: 'Datos invÃ¡lidos', errores });
     }
     const producto = await Producto.crear({ ...req.body, precio: Number(req.body.precio) });
     res.status(201).json({ ok: true, data: producto });
@@ -55,7 +55,7 @@ async function actualizar(req, res, next) {
     }
     const errores = validarProducto(req.body);
     if (errores.length) {
-      return res.status(400).json({ ok: false, mensaje: 'Datos inválidos', errores });
+      return res.status(400).json({ ok: false, mensaje: 'Datos invÃ¡lidos', errores });
     }
     const producto = await Producto.actualizar(req.params.id, { ...req.body, precio: Number(req.body.precio) });
     if (!producto) {

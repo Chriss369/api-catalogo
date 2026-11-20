@@ -19,7 +19,7 @@ app.use((req, res) => {
 
 app.use((err, req, res, next) => {
   if (err.type === 'entity.parse.failed') {
-    return res.status(400).json({ ok: false, mensaje: 'JSON inv·lido en el cuerpo de la peticiÛn' });
+    return res.status(400).json({ ok: false, mensaje: 'JSON inv√°lido en el cuerpo de la petici√≥n' });
   }
   console.error(err);
   res.status(500).json({ ok: false, mensaje: 'Error interno del servidor' });

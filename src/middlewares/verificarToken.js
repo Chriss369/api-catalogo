@@ -13,7 +13,7 @@ function verificarToken(req, res, next) {
     req.usuario = { id: payload.id, rol: payload.rol };
     next();
   } catch (err) {
-    const mensaje = err.name === 'TokenExpiredError' ? 'Token vencido' : 'Token inv·lido';
+    const mensaje = err.name === 'TokenExpiredError' ? 'Token vencido' : 'Token inv√°lido';
     return res.status(401).json({ ok: false, mensaje });
   }
 }

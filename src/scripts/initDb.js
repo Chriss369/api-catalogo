@@ -4,11 +4,11 @@ const path = require('path');
 const { Client } = require('pg');
 
 const productos = [
-  ['Laptop Lenovo IdeaPad', 'Laptop de 15 pulgadas con 8 GB de RAM y 256 GB SSD', 'TecnologÌa', 549.99],
-  ['Mouse inal·mbrico', 'Mouse ergonÛmico con conexiÛn USB y baterÌa de larga duraciÛn', 'Accesorios', 15.5],
-  ['Teclado mec·nico', 'Teclado mec·nico con retroiluminaciÛn y switches azules', 'Accesorios', 45.0],
-  ['AudÌfonos Bluetooth', 'AudÌfonos con cancelaciÛn de ruido y 20 horas de baterÌa', 'Audio', 79.9],
-  ['Monitor 24 pulgadas', 'Monitor Full HD con panel IPS y entrada HDMI', 'TecnologÌa', 139.0],
+  ['Laptop Lenovo IdeaPad', 'Laptop de 15 pulgadas con 8 GB de RAM y 256 GB SSD', 'Tecnolog√≠a', 549.99],
+  ['Mouse inal√°mbrico', 'Mouse ergon√≥mico con conexi√≥n USB y bater√≠a de larga duraci√≥n', 'Accesorios', 15.5],
+  ['Teclado mec√°nico', 'Teclado mec√°nico con retroiluminaci√≥n y switches azules', 'Accesorios', 45.0],
+  ['Aud√≠fonos Bluetooth', 'Aud√≠fonos con cancelaci√≥n de ruido y 20 horas de bater√≠a', 'Audio', 79.9],
+  ['Monitor 24 pulgadas', 'Monitor Full HD con panel IPS y entrada HDMI', 'Tecnolog√≠a', 139.0],
 ];
 
 async function main() {
@@ -41,7 +41,7 @@ async function main() {
     }
     console.log('5 productos de ejemplo insertados');
   } else {
-    console.log('Ya existen productos, no se insertÛ nada');
+    console.log('Ya existen productos, no se insert√≥ nada');
   }
 
   await client.end();
